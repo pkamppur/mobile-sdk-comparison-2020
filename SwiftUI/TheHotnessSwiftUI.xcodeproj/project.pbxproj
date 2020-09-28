@@ -1,0 +1,655 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B83A18B2522609000F289A5 /* TheHotnessSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83A18A2522609000F289A5 /* TheHotnessSwiftUIApp.swift */; };
+		2B83A18F2522609300F289A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B83A18E2522609300F289A5 /* Assets.xcassets */; };
+		2B83A1922522609300F289A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B83A1912522609300F289A5 /* Preview Assets.xcassets */; };
+		2B83A19D2522609300F289A5 /* TheHotnessSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83A19C2522609300F289A5 /* TheHotnessSwiftUITests.swift */; };
+		2B83A1A82522609300F289A5 /* TheHotnessSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83A1A72522609300F289A5 /* TheHotnessSwiftUIUITests.swift */; };
+		2B83A1C125226B2700F289A5 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83A1C025226B2700F289A5 /* Game.swift */; };
+		2B83A1CA25226B3600F289A5 /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83A1C825226B3600F289A5 /* GameRow.swift */; };
+		2B83A1CB25226B3600F289A5 /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83A1C925226B3600F289A5 /* GameListView.swift */; };
+		2B83A1D425226BAE00F289A5 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83A1D325226BAE00F289A5 /* Array+Extensions.swift */; };
+		2B83A1D925226BB700F289A5 /* RoundedThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83A1D825226BB700F289A5 /* RoundedThumbnail.swift */; };
+		2B83A1DF25226BC000F289A5 /* GameDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83A1DD25226BC000F289A5 /* GameDetails.swift */; };
+		2B83A1E025226BC000F289A5 /* GameDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83A1DE25226BC000F289A5 /* GameDetailsView.swift */; };
+		2B83A1E525226BE100F289A5 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83A1E425226BE100F289A5 /* URLImageView.swift */; };
+		2B83A1E925226BF600F289A5 /* BGGApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83A1D025226B7E00F289A5 /* BGGApi.swift */; };
+		2B83A2082523334B00F289A5 /* GameImageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83A2072523334B00F289A5 /* GameImageTitleView.swift */; };
+		2B83A20D2523337400F289A5 /* GameDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83A20C2523337400F289A5 /* GameDescriptionView.swift */; };
+		2B83A2122523339400F289A5 /* GameInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83A2112523339400F289A5 /* GameInfoView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B83A1992522609300F289A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B83A17F2522609000F289A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B83A1862522609000F289A5;
+			remoteInfo = TheHotnessSwiftUI;
+		};
+		2B83A1A42522609300F289A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B83A17F2522609000F289A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B83A1862522609000F289A5;
+			remoteInfo = TheHotnessSwiftUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B83A1872522609000F289A5 /* TheHotnessSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheHotnessSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B83A18A2522609000F289A5 /* TheHotnessSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheHotnessSwiftUIApp.swift; sourceTree = "<group>"; };
+		2B83A18E2522609300F289A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B83A1912522609300F289A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2B83A1932522609300F289A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B83A1982522609300F289A5 /* TheHotnessSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheHotnessSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B83A19C2522609300F289A5 /* TheHotnessSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheHotnessSwiftUITests.swift; sourceTree = "<group>"; };
+		2B83A19E2522609300F289A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B83A1A32522609300F289A5 /* TheHotnessSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheHotnessSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B83A1A72522609300F289A5 /* TheHotnessSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheHotnessSwiftUIUITests.swift; sourceTree = "<group>"; };
+		2B83A1A92522609300F289A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B83A1C025226B2700F289A5 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		2B83A1C825226B3600F289A5 /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
+		2B83A1C925226B3600F289A5 /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
+		2B83A1D025226B7E00F289A5 /* BGGApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGGApi.swift; sourceTree = "<group>"; };
+		2B83A1D325226BAE00F289A5 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		2B83A1D825226BB700F289A5 /* RoundedThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedThumbnail.swift; sourceTree = "<group>"; };
+		2B83A1DD25226BC000F289A5 /* GameDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetails.swift; sourceTree = "<group>"; };
+		2B83A1DE25226BC000F289A5 /* GameDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailsView.swift; sourceTree = "<group>"; };
+		2B83A1E425226BE100F289A5 /* URLImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
+		2B83A2072523334B00F289A5 /* GameImageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameImageTitleView.swift; sourceTree = "<group>"; };
+		2B83A20C2523337400F289A5 /* GameDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDescriptionView.swift; sourceTree = "<group>"; };
+		2B83A2112523339400F289A5 /* GameInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B83A1842522609000F289A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B83A1952522609300F289A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B83A1A02522609300F289A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B83A17E2522609000F289A5 = {
+			isa = PBXGroup;
+			children = (
+				2B83A1892522609000F289A5 /* TheHotnessSwiftUI */,
+				2B83A19B2522609300F289A5 /* TheHotnessSwiftUITests */,
+				2B83A1A62522609300F289A5 /* TheHotnessSwiftUIUITests */,
+				2B83A1882522609000F289A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B83A1882522609000F289A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B83A1872522609000F289A5 /* TheHotnessSwiftUI.app */,
+				2B83A1982522609300F289A5 /* TheHotnessSwiftUITests.xctest */,
+				2B83A1A32522609300F289A5 /* TheHotnessSwiftUIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B83A1892522609000F289A5 /* TheHotnessSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				2B83A1D225226BA400F289A5 /* Utils */,
+				2B83A1CF25226B6600F289A5 /* BGGApi */,
+				2B83A1BF25226AF900F289A5 /* GameDetails */,
+				2B83A1BE25226AF300F289A5 /* GameList */,
+				2B83A18A2522609000F289A5 /* TheHotnessSwiftUIApp.swift */,
+				2B83A18E2522609300F289A5 /* Assets.xcassets */,
+				2B83A1932522609300F289A5 /* Info.plist */,
+				2B83A1902522609300F289A5 /* Preview Content */,
+			);
+			path = TheHotnessSwiftUI;
+			sourceTree = "<group>";
+		};
+		2B83A1902522609300F289A5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2B83A1912522609300F289A5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2B83A19B2522609300F289A5 /* TheHotnessSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B83A19C2522609300F289A5 /* TheHotnessSwiftUITests.swift */,
+				2B83A19E2522609300F289A5 /* Info.plist */,
+			);
+			path = TheHotnessSwiftUITests;
+			sourceTree = "<group>";
+		};
+		2B83A1A62522609300F289A5 /* TheHotnessSwiftUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B83A1A72522609300F289A5 /* TheHotnessSwiftUIUITests.swift */,
+				2B83A1A92522609300F289A5 /* Info.plist */,
+			);
+			path = TheHotnessSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		2B83A1BE25226AF300F289A5 /* GameList */ = {
+			isa = PBXGroup;
+			children = (
+				2B83A1C925226B3600F289A5 /* GameListView.swift */,
+				2B83A1C825226B3600F289A5 /* GameRow.swift */,
+				2B83A1D825226BB700F289A5 /* RoundedThumbnail.swift */,
+			);
+			path = GameList;
+			sourceTree = "<group>";
+		};
+		2B83A1BF25226AF900F289A5 /* GameDetails */ = {
+			isa = PBXGroup;
+			children = (
+				2B83A1DE25226BC000F289A5 /* GameDetailsView.swift */,
+				2B83A2072523334B00F289A5 /* GameImageTitleView.swift */,
+				2B83A2112523339400F289A5 /* GameInfoView.swift */,
+				2B83A20C2523337400F289A5 /* GameDescriptionView.swift */,
+			);
+			path = GameDetails;
+			sourceTree = "<group>";
+		};
+		2B83A1CF25226B6600F289A5 /* BGGApi */ = {
+			isa = PBXGroup;
+			children = (
+				2B83A1D025226B7E00F289A5 /* BGGApi.swift */,
+				2B83A1DD25226BC000F289A5 /* GameDetails.swift */,
+				2B83A1C025226B2700F289A5 /* Game.swift */,
+			);
+			path = BGGApi;
+			sourceTree = "<group>";
+		};
+		2B83A1D225226BA400F289A5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2B83A1D325226BAE00F289A5 /* Array+Extensions.swift */,
+				2B83A1E425226BE100F289A5 /* URLImageView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B83A1862522609000F289A5 /* TheHotnessSwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B83A1AC2522609300F289A5 /* Build configuration list for PBXNativeTarget "TheHotnessSwiftUI" */;
+			buildPhases = (
+				2B83A1832522609000F289A5 /* Sources */,
+				2B83A1842522609000F289A5 /* Frameworks */,
+				2B83A1852522609000F289A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TheHotnessSwiftUI;
+			productName = TheHotnessSwiftUI;
+			productReference = 2B83A1872522609000F289A5 /* TheHotnessSwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B83A1972522609300F289A5 /* TheHotnessSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B83A1AF2522609300F289A5 /* Build configuration list for PBXNativeTarget "TheHotnessSwiftUITests" */;
+			buildPhases = (
+				2B83A1942522609300F289A5 /* Sources */,
+				2B83A1952522609300F289A5 /* Frameworks */,
+				2B83A1962522609300F289A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B83A19A2522609300F289A5 /* PBXTargetDependency */,
+			);
+			name = TheHotnessSwiftUITests;
+			productName = TheHotnessSwiftUITests;
+			productReference = 2B83A1982522609300F289A5 /* TheHotnessSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B83A1A22522609300F289A5 /* TheHotnessSwiftUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B83A1B22522609300F289A5 /* Build configuration list for PBXNativeTarget "TheHotnessSwiftUIUITests" */;
+			buildPhases = (
+				2B83A19F2522609300F289A5 /* Sources */,
+				2B83A1A02522609300F289A5 /* Frameworks */,
+				2B83A1A12522609300F289A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B83A1A52522609300F289A5 /* PBXTargetDependency */,
+			);
+			name = TheHotnessSwiftUIUITests;
+			productName = TheHotnessSwiftUIUITests;
+			productReference = 2B83A1A32522609300F289A5 /* TheHotnessSwiftUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B83A17F2522609000F289A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					2B83A1862522609000F289A5 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					2B83A1972522609300F289A5 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 2B83A1862522609000F289A5;
+					};
+					2B83A1A22522609300F289A5 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 2B83A1862522609000F289A5;
+					};
+				};
+			};
+			buildConfigurationList = 2B83A1822522609000F289A5 /* Build configuration list for PBXProject "TheHotnessSwiftUI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B83A17E2522609000F289A5;
+			productRefGroup = 2B83A1882522609000F289A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B83A1862522609000F289A5 /* TheHotnessSwiftUI */,
+				2B83A1972522609300F289A5 /* TheHotnessSwiftUITests */,
+				2B83A1A22522609300F289A5 /* TheHotnessSwiftUIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B83A1852522609000F289A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B83A1922522609300F289A5 /* Preview Assets.xcassets in Resources */,
+				2B83A18F2522609300F289A5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B83A1962522609300F289A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B83A1A12522609300F289A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B83A1832522609000F289A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B83A1D425226BAE00F289A5 /* Array+Extensions.swift in Sources */,
+				2B83A20D2523337400F289A5 /* GameDescriptionView.swift in Sources */,
+				2B83A1C125226B2700F289A5 /* Game.swift in Sources */,
+				2B83A1E525226BE100F289A5 /* URLImageView.swift in Sources */,
+				2B83A1E925226BF600F289A5 /* BGGApi.swift in Sources */,
+				2B83A2082523334B00F289A5 /* GameImageTitleView.swift in Sources */,
+				2B83A1D925226BB700F289A5 /* RoundedThumbnail.swift in Sources */,
+				2B83A1E025226BC000F289A5 /* GameDetailsView.swift in Sources */,
+				2B83A1DF25226BC000F289A5 /* GameDetails.swift in Sources */,
+				2B83A1CB25226B3600F289A5 /* GameListView.swift in Sources */,
+				2B83A1CA25226B3600F289A5 /* GameRow.swift in Sources */,
+				2B83A2122523339400F289A5 /* GameInfoView.swift in Sources */,
+				2B83A18B2522609000F289A5 /* TheHotnessSwiftUIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B83A1942522609300F289A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B83A19D2522609300F289A5 /* TheHotnessSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B83A19F2522609300F289A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B83A1A82522609300F289A5 /* TheHotnessSwiftUIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B83A19A2522609300F289A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B83A1862522609000F289A5 /* TheHotnessSwiftUI */;
+			targetProxy = 2B83A1992522609300F289A5 /* PBXContainerItemProxy */;
+		};
+		2B83A1A52522609300F289A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B83A1862522609000F289A5 /* TheHotnessSwiftUI */;
+			targetProxy = 2B83A1A42522609300F289A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2B83A1AA2522609300F289A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B83A1AB2522609300F289A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B83A1AD2522609300F289A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TheHotnessSwiftUI/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TheHotnessSwiftUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thehotness.swiftui.TheHotnessSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B83A1AE2522609300F289A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TheHotnessSwiftUI/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TheHotnessSwiftUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thehotness.swiftui.TheHotnessSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2B83A1B02522609300F289A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TheHotnessSwiftUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thehotness.swiftui.TheHotnessSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheHotnessSwiftUI.app/TheHotnessSwiftUI";
+			};
+			name = Debug;
+		};
+		2B83A1B12522609300F289A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TheHotnessSwiftUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thehotness.swiftui.TheHotnessSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheHotnessSwiftUI.app/TheHotnessSwiftUI";
+			};
+			name = Release;
+		};
+		2B83A1B32522609300F289A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TheHotnessSwiftUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thehotness.swiftui.TheHotnessSwiftUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheHotnessSwiftUI;
+			};
+			name = Debug;
+		};
+		2B83A1B42522609300F289A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TheHotnessSwiftUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thehotness.swiftui.TheHotnessSwiftUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheHotnessSwiftUI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B83A1822522609000F289A5 /* Build configuration list for PBXProject "TheHotnessSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B83A1AA2522609300F289A5 /* Debug */,
+				2B83A1AB2522609300F289A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B83A1AC2522609300F289A5 /* Build configuration list for PBXNativeTarget "TheHotnessSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B83A1AD2522609300F289A5 /* Debug */,
+				2B83A1AE2522609300F289A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B83A1AF2522609300F289A5 /* Build configuration list for PBXNativeTarget "TheHotnessSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B83A1B02522609300F289A5 /* Debug */,
+				2B83A1B12522609300F289A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B83A1B22522609300F289A5 /* Build configuration list for PBXNativeTarget "TheHotnessSwiftUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B83A1B32522609300F289A5 /* Debug */,
+				2B83A1B42522609300F289A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B83A17F2522609000F289A5 /* Project object */;
+}
