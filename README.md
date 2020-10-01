@@ -6,6 +6,7 @@ Comparing the developer experience of mobile SDKs offering declarative UI.
 
 - [What](#what)
 - [Why](#why)
+- [What Is Declarative UI](#what-is-declarative-ui)
 - [The App](#the-app)
 - [Prerequisites for Running The Apps](#prerequisites-for-running-the-apps)
 - [Running The Apps](#running-the-apps)
@@ -34,6 +35,26 @@ I chose these SDKs because of their modern **declarative UI** and hopefully bett
 I wanted to create a simple app with all these SDKs to learn them better and see what it's like to start a new project with these techs in 2020. What comes out of the box, how easy is it to set up a new project, what else is needed for a simple real world app?
 
 The aim is to create an app that looks and feels pretty much native. I've checked the apps on iOS, because SwiftUI is iOS-only, even though React Native and Flutter support cross-platform development. Looking at doing cross-platform (Android and iOS) would also be interesting, as would be learning [Jetpack Compose](https://developer.android.com/jetpack/compose).
+
+## What Is Declarative UI
+
+Declarative UI means I, as the programmer, declare how I want the UI to look, not how to build it. HTML is an example. Plain old HTML is just static. Declarative UIs start to shine, in my opinion, when things change and become dynamic. For example, in the old imperative way (UIKit), code has to keep references to view to update them. In declarative code, there's only the code that describes how the UI should look in each possible state. No more keeping track of views, no more multiple callbacks touching the same view and sometimes conflicting when timing is just right etc. Classes of problems just go away.
+
+Below is a good example. What UI is shown depends on the state of the app. If `games` have been loaded, they're shown. If not, show spinner. No more "remove this view when loading ends, and then add these to the table view, oh and add the table view as well". Also notice there's not much layout specified here. SwiftUI has nice defaults, so the most common thing is the default, and thus the code can be very short.
+
+```swift
+    var body: some View {
+        Group {
+            if let games = games {
+                LoadedGameList(games: games)
+            } else {
+                ProgressView()
+            }
+        }
+    }
+```
+
+So in short, UI is a function of the app state (in a mathematical sense). Read more about declarative UI from [Flutter documentation](https://flutter.dev/docs/get-started/flutter-for/declarative).
 
 ## The App
 
