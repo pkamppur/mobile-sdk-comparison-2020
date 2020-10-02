@@ -9,7 +9,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'The Hotness Flutter',
       theme: ThemeData(
-        primarySwatch: Colors.grey,
+        primarySwatch: MaterialColor(
+          0xFFFFFFFF,
+          <int, Color>{
+            50: Color(0xFFFAFAFA),
+            100: Color(0xFFF5F5F5),
+            200: Color(0xFFEEEEEE),
+            300: Color(0xFFE0E0E0),
+            350: Color(0xFFD6D6D6),
+            400: Color(0xFFBDBDBD),
+            500: Color(0xFFFFFFFF),
+            600: Color(0xFF757575),
+            700: Color(0xFF616161),
+            800: Color(0xFF424242),
+            850: Color(0xFF303030), // only for background color in dark theme
+            900: Color(0xFF212121),
+          },
+        ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: 'The Hotness'),
@@ -17,21 +33,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
+class MyHomePage extends StatelessWidget {
   final String title;
 
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
+  MyHomePage({Key key, this.title}) : super(key: key);
+  
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(title),
       ),
       body: GameListRoute(),
     );
