@@ -42,29 +42,28 @@ class _GameListRouteState extends State<GameListRoute> {
 }
 
 class _LoadedGameList extends StatelessWidget {
-  _LoadedGameList({Key key, this.games}) : super(key: key);
-
   final List<Game> games;
 
+  _LoadedGameList({Key key, this.games}) : super(key: key);
+
   @override
-  Widget build(BuildContext context) {
-    return ListView.separated(
-      padding: const EdgeInsets.only(left: 10),
-      itemCount: games.length,
-      separatorBuilder: (BuildContext context, int index) => Divider(height: 1, color: Colors.grey.shade300),
-      itemBuilder: (BuildContext context, int index) {
-        final game = games[index];
-        return GestureDetector(
-          child: GameListRow(game: game),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => GameDetailsRoute(gameId: game.id)),
-            );
-          },
-        );
-      },
-    );
-  }
+  Widget build(BuildContext context) => ListView.separated(
+        padding: const EdgeInsets.only(left: 10),
+        itemCount: games.length,
+        separatorBuilder: (BuildContext context, int index) =>
+            Divider(height: 1, color: Colors.grey.shade300),
+        itemBuilder: (BuildContext context, int index) {
+          final game = games[index];
+          return GestureDetector(
+            child: GameListRow(game: game),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => GameDetailsRoute(gameId: game.id)),
+              );
+            },
+          );
+        },
+      );
 }

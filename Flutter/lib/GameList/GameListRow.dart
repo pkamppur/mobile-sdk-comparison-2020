@@ -10,9 +10,9 @@ class GameListRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Row(children: [
         ThumbnailView(thumbnailUrl: game.thumbnailUrl),
-        Flexible(
-          child: Container(
-            margin: const EdgeInsets.only(left: 8),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 8),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
