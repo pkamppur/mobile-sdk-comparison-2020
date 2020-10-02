@@ -20,7 +20,7 @@ class GameInfoView extends StatelessWidget {
             indent: 10,
             endIndent: 10,
           ),
-          Container(
+          Padding(
             padding: EdgeInsets.all(10),
             child: Column(
               children: [
@@ -53,10 +53,7 @@ class GameInfoView extends StatelessWidget {
 class GameFormatWidget extends StatelessWidget {
   final GameDetails details;
 
-  const GameFormatWidget({
-    Key key,
-    @required this.details,
-  }) : super(key: key);
+  const GameFormatWidget({Key key, @required this.details}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => IntrinsicHeight(
@@ -101,11 +98,9 @@ class GameInfoContentLine extends StatelessWidget {
   final String title;
   final String content;
 
-  const GameInfoContentLine({
-    Key key,
-    @required this.title,
-    @required this.content,
-  }) : super(key: key);
+  const GameInfoContentLine(
+      {Key key, @required this.title, @required this.content})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
