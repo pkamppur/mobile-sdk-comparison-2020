@@ -2,9 +2,8 @@ import 'dart:async';
 
 import 'package:TheHotness/BGGApi/BGGApi.dart';
 import 'package:TheHotness/GameDetails/GameDetailsRoute.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:TheHotness/adaptive.dart';
 import 'package:flutter/material.dart';
-
 import 'package:TheHotness/BGGApi/Game.dart';
 import 'package:TheHotness/GameList/GameListRow.dart';
 
@@ -63,7 +62,8 @@ class _LoadedGameList extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                CupertinoPageRoute(
+                AdaptivePageRoute.build(
+                  context,
                   builder: (context) => GameDetailsRoute(gameId: game.id),
                 ),
               );
@@ -72,3 +72,4 @@ class _LoadedGameList extends StatelessWidget {
         },
       );
 }
+
