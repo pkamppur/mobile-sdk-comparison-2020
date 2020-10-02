@@ -5,6 +5,7 @@ import 'package:TheHotness/BGGApi/GameDetails.dart';
 import 'package:TheHotness/GameDetails/GameDescriptionView.dart';
 import 'package:TheHotness/GameDetails/GameImageTitleView.dart';
 import 'package:TheHotness/GameDetails/GameInfoView.dart';
+import 'package:TheHotness/adaptive.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -53,7 +54,7 @@ class _GameDetailsRouteState extends State<GameDetailsRoute> {
             } else if (snapshot.hasError) {
               return Text("${snapshot.error}");
             } else {
-              return Center(child: CircularProgressIndicator());
+              return Center(child: AdaptiveProgressIndicator());
             }
           },
         ),

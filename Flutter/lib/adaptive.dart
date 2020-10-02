@@ -56,3 +56,10 @@ class AdaptivePageRoute {
             )
           : MaterialPageRoute(builder: builder);
 }
+
+class AdaptiveProgressIndicator extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) => AdaptiveApp.isApple(context)
+      ? CupertinoActivityIndicator()
+      : CircularProgressIndicator();
+}

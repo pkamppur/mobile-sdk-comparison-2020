@@ -36,7 +36,7 @@ class _GameListRouteState extends State<GameListRoute> {
           } else if (snapshot.hasError) {
             return Text("${snapshot.error}");
           } else {
-            return Center(child: CircularProgressIndicator());
+            return Center(child: AdaptiveProgressIndicator());
           }
         },
       ),
