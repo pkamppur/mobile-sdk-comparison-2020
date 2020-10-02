@@ -5,6 +5,7 @@ import 'package:TheHotness/BGGApi/GameDetails.dart';
 import 'package:TheHotness/GameDetails/GameDescriptionView.dart';
 import 'package:TheHotness/GameDetails/GameImageTitleView.dart';
 import 'package:TheHotness/GameDetails/GameInfoView.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class GameDetailsRoute extends StatefulWidget {
@@ -29,19 +30,21 @@ class _GameDetailsRouteState extends State<GameDetailsRoute> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: FutureBuilder<GameDetails>(
-              future: details,
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  return Text(snapshot.data.name);
-                } else {
-                  return Text("");
-                }
-              }),
-        ),
-        body: FutureBuilder<GameDetails>(
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: FutureBuilder<GameDetails>(
+            future: details,
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return Text(snapshot.data.name);
+              } else {
+                return Text("");
+              }
+            }),
+      ),
+      child: SafeArea(
+        bottom: false,
+        child: FutureBuilder<GameDetails>(
           future: details,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
@@ -53,7 +56,9 @@ class _GameDetailsRouteState extends State<GameDetailsRoute> {
               return Center(child: CircularProgressIndicator());
             }
           },
-        ));
+        ),
+      ),
+    );
   }
 }
 
