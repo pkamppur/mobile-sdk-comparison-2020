@@ -9,7 +9,6 @@ class GameInfoView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: double.infinity,
         color: Colors.grey.shade300,
         child: Column(children: [
           Row(
@@ -40,7 +39,7 @@ class GameInfoView extends StatelessWidget {
                               ])))),
               Expanded(
                   child: Container(
-                      padding: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(0),
                       child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -65,66 +64,50 @@ class GameInfoView extends StatelessWidget {
             padding: EdgeInsets.all(10),
             child: Column(
               children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Designer: ',
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText1
-                            .apply(fontSizeFactor: 1.1)),
-                    Expanded(
-                        child: Text(
-                            '${details.designers.map((e) => e.name).join(',')}',
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyText2
-                                .apply(fontSizeFactor: 1.2)))
-                  ],
-                ),
+                GameInfoContentLine(title: 'Designer: ',content: '${details.designers.map((e) => e.name).join(',')}',),
                 SizedBox(
                   height: 4,
                 ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Artist: ',
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText1
-                            .apply(fontSizeFactor: 1.1)),
-                    Expanded(
-                        child: Text(
-                            '${details.artists.map((e) => e.name).join(', ')}',
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyText2
-                                .apply(fontSizeFactor: 1.2)))
-                  ],
-                ),
+                GameInfoContentLine(title: 'Artist: ', content: '${details.artists.map((e) => e.name).join(', ')}',),
                 SizedBox(
-                  height: 4,
+                  height: 4
                 ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Publisher: ',
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText1
-                            .apply(fontSizeFactor: 1.2)),
-                    Expanded(
-                        child: Text(
-                            '${details.publishers.first.name} + ${details.publishers.length - 1} More',
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyText2
-                                .apply(fontSizeFactor: 1.2)))
-                  ],
-                ),
+                GameInfoContentLine(title: 'Publisher: ', content: '${details.publishers.first.name} + ${details.publishers.length - 1} More',),
               ],
             ),
           ),
         ]));
+  }
+}
+
+class GameInfoContentLine extends StatelessWidget {
+  final String title;
+  final String content;
+
+  const GameInfoContentLine({
+    Key key,
+    @required this.title,
+    @required this.content,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(title,
+            style: Theme.of(context)
+                .textTheme
+                .bodyText1
+                .apply(fontSizeFactor: 1.2)),
+        Expanded(
+            child: Text(
+              content,
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyText2
+                    .apply(fontSizeFactor: 1.2)))
+      ],
+    );
   }
 }
