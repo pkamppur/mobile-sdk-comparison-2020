@@ -36,7 +36,7 @@ class AdaptiveScaffold extends StatelessWidget {
   Widget build(BuildContext context) => AdaptiveApp.isApple(context)
       ? CupertinoPageScaffold(
           navigationBar: CupertinoNavigationBar(
-            middle: title,
+            middle: DefaultTextStyle(child: title, style: DefaultTextStyle.of(context).style),
           ),
           child: child,
         )
