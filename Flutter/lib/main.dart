@@ -22,7 +22,7 @@ class MyHomePage extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return AdaptiveScaffold(
-      title: title,
+      title: Text(title),
       child: GameListRoute(),
     );
   }

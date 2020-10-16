@@ -31,17 +31,16 @@ class _GameDetailsRouteState extends State<GameDetailsRoute> {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: FutureBuilder<GameDetails>(
-            future: details,
-            builder: (context, snapshot) {
-              if (snapshot.hasData) {
-                return Text(snapshot.data.name);
-              } else {
-                return Text("");
-              }
-            }),
+    return AdaptiveScaffold(
+      title: FutureBuilder<GameDetails>(
+        future: details,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return Text(snapshot.data.name);
+          } else {
+            return Text("");
+          }
+        },
       ),
       child: SafeArea(
         bottom: false,

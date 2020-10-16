@@ -27,7 +27,7 @@ class AdaptiveApp extends StatelessWidget {
 }
 
 class AdaptiveScaffold extends StatelessWidget {
-  final String title;
+  final Widget title;
   final Widget child;
 
   AdaptiveScaffold({this.title, this.child});
@@ -36,13 +36,13 @@ class AdaptiveScaffold extends StatelessWidget {
   Widget build(BuildContext context) => AdaptiveApp.isApple(context)
       ? CupertinoPageScaffold(
           navigationBar: CupertinoNavigationBar(
-            middle: Text(title),
+            middle: title,
           ),
           child: child,
         )
       : Scaffold(
           appBar: AppBar(
-            title: Text(title),
+            title: title,
           ),
           body: child,
         );
