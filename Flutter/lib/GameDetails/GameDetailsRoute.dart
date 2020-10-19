@@ -20,12 +20,10 @@ class GameDetailsRoute extends StatefulWidget {
 
 class _GameDetailsRouteState extends State<GameDetailsRoute> {
   Future<GameDetails> details;
-  String title = "";
 
   @override
   void initState() {
     details = BGGApi.fetchGameDetails(widget.gameId);
-
     super.initState();
   }
 
@@ -49,11 +47,16 @@ class _GameDetailsRouteState extends State<GameDetailsRoute> {
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return SingleChildScrollView(
-                  child: GameDetailsWidget(details: snapshot.data));
+                child: GameDetailsWidget(details: snapshot.data),
+              );
             } else if (snapshot.hasError) {
-              return Text("${snapshot.error}");
+              return Center(
+                child: Text("${snapshot.error}"),
+              );
             } else {
-              return Center(child: AdaptiveProgressIndicator());
+              return Center(
+                child: AdaptiveProgressIndicator(),
+              );
             }
           },
         ),
