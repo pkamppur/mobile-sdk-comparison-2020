@@ -64,7 +64,7 @@ class _LoadedGameList extends StatelessWidget {
                 context,
                 AdaptivePageRoute.build(
                   context,
-                  builder: (context) => GameDetailsRoute(gameId: game.id, title: game.name),
+                  builder: (context) => GameDetailsRoute(gameId: game.id),
                 ),
               );
             },

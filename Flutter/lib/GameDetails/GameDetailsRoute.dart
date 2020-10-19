@@ -10,10 +10,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class GameDetailsRoute extends StatefulWidget {
-  final String gameId;
-  final String title;
+  GameDetailsRoute({Key key, this.gameId}) : super(key: key);
 
-  GameDetailsRoute({Key key, this.gameId, this.title}) : super(key: key);
+  final String gameId;
 
   @override
   _GameDetailsRouteState createState() => _GameDetailsRouteState();
@@ -21,6 +20,7 @@ class GameDetailsRoute extends StatefulWidget {
 
 class _GameDetailsRouteState extends State<GameDetailsRoute> {
   Future<GameDetails> details;
+  String title = "";
 
   @override
   void initState() {
@@ -32,7 +32,16 @@ class _GameDetailsRouteState extends State<GameDetailsRoute> {
   @override
   Widget build(BuildContext context) {
     return AdaptiveScaffold(
-      title: Text(widget.title),
+      title: FutureBuilder<GameDetails>(
+        future: details,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return Text(snapshot.data.name);
+          } else {
+            return Text("");
+          }
+        },
+      ),
       child: SafeArea(
         bottom: false,
         child: FutureBuilder<GameDetails>(
