@@ -5,6 +5,8 @@ import 'package:TheHotness/BGGApi/GameDetails.dart';
 import 'package:TheHotness/GameDetails/GameDescriptionView.dart';
 import 'package:TheHotness/GameDetails/GameImageTitleView.dart';
 import 'package:TheHotness/GameDetails/GameInfoView.dart';
+import 'package:TheHotness/adaptive.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class GameDetailsRoute extends StatefulWidget {
@@ -18,42 +20,48 @@ class GameDetailsRoute extends StatefulWidget {
 
 class _GameDetailsRouteState extends State<GameDetailsRoute> {
   Future<GameDetails> details;
-  String title = "";
 
   @override
   void initState() {
     details = BGGApi.fetchGameDetails(widget.gameId);
-
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: FutureBuilder<GameDetails>(
-              future: details,
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  return Text(snapshot.data.name);
-                } else {
-                  return Text("");
-                }
-              }),
-        ),
-        body: FutureBuilder<GameDetails>(
+    return AdaptiveScaffold(
+      title: FutureBuilder<GameDetails>(
+        future: details,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return Text(snapshot.data.name);
+          } else {
+            return Text("");
+          }
+        },
+      ),
+      child: SafeArea(
+        bottom: false,
+        child: FutureBuilder<GameDetails>(
           future: details,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return SingleChildScrollView(
-                  child: GameDetailsWidget(details: snapshot.data));
+                child: GameDetailsWidget(details: snapshot.data),
+              );
             } else if (snapshot.hasError) {
-              return Text("${snapshot.error}");
+              return Center(
+                child: Text("${snapshot.error}"),
+              );
             } else {
-              return Center(child: CircularProgressIndicator());
+              return Center(
+                child: AdaptiveProgressIndicator(),
+              );
             }
           },
-        ));
+        ),
+      ),
+    );
   }
 }
 

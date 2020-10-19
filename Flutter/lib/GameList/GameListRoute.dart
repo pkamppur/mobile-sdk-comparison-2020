@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:TheHotness/BGGApi/BGGApi.dart';
 import 'package:TheHotness/GameDetails/GameDetailsRoute.dart';
+import 'package:TheHotness/adaptive.dart';
 import 'package:flutter/material.dart';
-
 import 'package:TheHotness/BGGApi/Game.dart';
 import 'package:TheHotness/GameList/GameListRow.dart';
 
@@ -26,17 +26,20 @@ class _GameListRouteState extends State<GameListRoute> {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<List<Game>>(
-      future: gameList,
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          return _LoadedGameList(games: snapshot.data);
-        } else if (snapshot.hasError) {
-          return Text("${snapshot.error}");
-        } else {
-          return Center(child: CircularProgressIndicator());
-        }
-      },
+    return SafeArea(
+      bottom: false,
+      child: FutureBuilder<List<Game>>(
+        future: gameList,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return _LoadedGameList(games: snapshot.data);
+          } else if (snapshot.hasError) {
+            return Text("${snapshot.error}");
+          } else {
+            return Center(child: AdaptiveProgressIndicator());
+          }
+        },
+      ),
     );
   }
 }
@@ -59,11 +62,14 @@ class _LoadedGameList extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                    builder: (context) => GameDetailsRoute(gameId: game.id)),
+                AdaptivePageRoute.build(
+                  context,
+                  builder: (context) => GameDetailsRoute(gameId: game.id),
+                ),
               );
             },
           );
         },
       );
 }
+
