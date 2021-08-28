@@ -1,7 +1,7 @@
 import {
-  createStackNavigator,
-  StackNavigationProp,
-} from '@react-navigation/stack';
+  createNativeStackNavigator,
+  NativeStackNavigationProp,
+} from '@react-navigation/native-stack';
 import * as React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
@@ -13,7 +13,7 @@ type RootStackNavigationProps = {
   GameDatailsScreen: {gameId: string};
 };
 
-const Stack = createStackNavigator<RootStackNavigationProps>();
+const Stack = createNativeStackNavigator<RootStackNavigationProps>();
 
 export const MyStack = () => {
   return (
@@ -33,7 +33,7 @@ export const MyStack = () => {
 };
 
 interface HomeScreenProps {
-  navigation: StackNavigationProp<any>;
+  navigation: NativeStackNavigationProp<any>;
 }
 
 const HomeScreen = ({navigation}: HomeScreenProps) => {

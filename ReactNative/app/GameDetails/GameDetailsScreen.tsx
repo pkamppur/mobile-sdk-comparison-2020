@@ -41,12 +41,12 @@ export const GameDetailsScreen = ({route, navigation}: Props) => {
 
   React.useEffect(() => {
     BGGApi.fetchGameDetails(gameId)
-      .then((details) => {
+      .then(details => {
         console.log('did load details:');
         navigation.setOptions({title: details.name});
         setState({details: details});
       })
-      .catch((e) => {
+      .catch(e => {
         console.log(e);
       });
   }, [gameId, navigation]);
