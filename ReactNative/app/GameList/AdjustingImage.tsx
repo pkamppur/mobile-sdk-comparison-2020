@@ -1,12 +1,13 @@
 import * as React from 'react';
 import {
+  Image,
   ImageSourcePropType,
+  ImageStyle,
   LayoutChangeEvent,
   StyleProp,
   View,
   ViewStyle,
 } from 'react-native';
-import ScalableImage, {IImageProps} from 'react-native-scalable-image';
 
 export const AdjustingImage = ({
   source,
@@ -25,8 +26,8 @@ export const AdjustingImage = ({
           setImageWidth(newWidth);
         }
       }}>
-      <ScalableImage
-        style={style as IImageProps}
+      <Image
+        style={style as ImageStyle}
         resizeMode={'contain'}
         width={imageWidth}
         source={source}
