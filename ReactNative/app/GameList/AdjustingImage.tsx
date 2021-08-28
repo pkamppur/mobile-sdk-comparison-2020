@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useState, useEffect} from 'react';
 import {
   Image,
   ImageStyle,
@@ -15,20 +16,43 @@ export const AdjustingImage = ({
   source: string;
   style?: StyleProp<ViewStyle>;
 }) => {
-  const [imageWidth, setImageWidth] = React.useState(0);
+  const [containerWidth, setContainerWidth] = useState(0);
+  const [containerHeight, setContainerHeight] = useState(0);
+  const [imageWidth, setImageWidth] = useState(0);
+  const [imageHeight, setImageHeight] = useState(0);
+
+  useEffect(() => {
+    Image.getSize(source, (width, height) => {
+      setImageWidth(width);
+      setImageHeight(height);
+    });
+  }, [source]);
+
+  const widthScale = containerWidth / Math.max(imageWidth, 1);
+
+  const scale = widthScale;
+  const imageViewWidth = imageWidth * scale;
+  const imageViewHeight = imageHeight * scale;
+
   return (
     <View
       style={style}
       onLayout={(e: LayoutChangeEvent) => {
         var newWidth = e.nativeEvent.layout.width;
-        if (imageWidth !== newWidth) {
-          setImageWidth(newWidth);
+        var newHeight = e.nativeEvent.layout.height;
+
+        if (newWidth !== containerWidth) {
+          setContainerWidth(newWidth);
+        }
+        if (newHeight !== containerHeight) {
+          setContainerHeight(newHeight);
         }
       }}>
       <Image
         style={style as ImageStyle}
         resizeMode={'contain'}
-        width={imageWidth}
+        width={imageViewWidth}
+        height={imageViewHeight}
         source={{uri: source}}
       />
     </View>
