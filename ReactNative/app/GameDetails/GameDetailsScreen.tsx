@@ -60,15 +60,15 @@ export const GameDetailsScreen = ({route, navigation}: Props) => {
     );
   } else {
     return (
-      <ScrollView>
-        <SafeAreaView>
+      <SafeAreaView>
+        <ScrollView>
           <View style={styles.screenContainer}>
             <GameImageTitle details={details} />
             <GameInfo details={details} />
             <GameDescription details={details} />
           </View>
-        </SafeAreaView>
-      </ScrollView>
+        </ScrollView>
+      </SafeAreaView>
     );
   }
 };
