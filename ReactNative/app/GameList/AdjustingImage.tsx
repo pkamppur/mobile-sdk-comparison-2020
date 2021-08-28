@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {
   Image,
-  ImageSourcePropType,
   ImageStyle,
   LayoutChangeEvent,
   StyleProp,
@@ -13,7 +12,7 @@ export const AdjustingImage = ({
   source,
   style,
 }: {
-  source: ImageSourcePropType;
+  source: string;
   style?: StyleProp<ViewStyle>;
 }) => {
   const [imageWidth, setImageWidth] = React.useState(0);
@@ -30,7 +29,7 @@ export const AdjustingImage = ({
         style={style as ImageStyle}
         resizeMode={'contain'}
         width={imageWidth}
-        source={source}
+        source={{uri: source}}
       />
     </View>
   );

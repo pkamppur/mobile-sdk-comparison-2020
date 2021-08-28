@@ -7,10 +7,7 @@ import {AdjustingImage} from '../GameList/AdjustingImage';
 export const GameImageTitle = ({details}: {details: GameDetails}) => {
   return (
     <View style={styles.coverImageContainer}>
-      <AdjustingImage
-        style={styles.coverImage}
-        source={{uri: details.imageUrl}}
-      />
+      <AdjustingImage style={styles.coverImage} source={details.imageUrl} />
       <View style={styles.titleContainer}>
         <Text style={[styles.titleText, styles.title]}>{details.name}</Text>
         <Text style={[styles.titleText, styles.yearPublished]}>
