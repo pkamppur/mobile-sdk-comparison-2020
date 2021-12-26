@@ -7,11 +7,13 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "prettier": "prettier --check '{app,__tests__}/**/*.{js,ts}*'",
+    "prettier:fix": "npm run prettier -- --write"
   },
   "dependencies": {
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
+    "@testing-library/react-native": "^9.0.0",
     "react": "17.0.2",
     "react-native": "0.66.4",
     "react-native-gesture-handler": "^2.1.0",
@@ -29,6 +31,7 @@
     "@typescript-eslint/parser": "^5.7.0",
     "babel-jest": "^27.4.5",
     "eslint": "^8.5.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.5",
     "metro-react-native-babel-preset": "^0.66.2",
     "react-test-renderer": "17.0.2",
@@ -39,6 +42,9 @@
   },
   "jest": {
     "preset": "react-native",
+    "moduleNameMapper": {
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy"
+    },
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -46,6 +52,15 @@
       "jsx",
       "json",
       "node"
+    ],
+    "testPathIgnorePatterns": [
+      "jest-setup.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)"
+    ],
+    "setupFiles": [
+      "<rootDir>/__tests__/jest-setup.js"
     ]
   }
 }
