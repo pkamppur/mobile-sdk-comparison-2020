@@ -8,9 +8,9 @@
  * @format
  */
 
-import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {MyStack} from './app/home';
+import { NavigationContainer } from '@react-navigation/native';
+import { MyStack } from './app/home';
 
 const App = () => {
   return (

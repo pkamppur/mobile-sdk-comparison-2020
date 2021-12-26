@@ -1,8 +1,8 @@
 import * as React from 'react';
-import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
-import {GameDetails, Link as GameDetailsLink} from '../BGGApi/GameDetails';
+import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
+import { GameDetails, Link as GameDetailsLink } from '../BGGApi/GameDetails';
 
-export const GameDescription = ({details}: {details: GameDetails}) => {
+export const GameDescription = ({ details }: { details: GameDetails }) => {
   return (
     <View style={styles.descriptionContainer}>
       <Text style={styles.descriptionTitle}>Description</Text>
@@ -37,7 +37,7 @@ const Category = ({
   return (
     <View style={style}>
       <Text style={styles.categoryTitle}>{title}</Text>
-      {content.map((x) => (
+      {content.map(x => (
         <Text key={x.id} style={styles.categoryContents}>
           {x.name}
         </Text>

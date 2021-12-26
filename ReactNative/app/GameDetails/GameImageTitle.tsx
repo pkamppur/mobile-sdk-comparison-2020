@@ -1,10 +1,10 @@
 import * as React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {GameDetails} from '../BGGApi/GameDetails';
-import {AdjustingImage} from '../GameList/AdjustingImage';
+import { StyleSheet, Text, View } from 'react-native';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { GameDetails } from '../BGGApi/GameDetails';
+import { AdjustingImage } from '../GameList/AdjustingImage';
 
-export const GameImageTitle = ({details}: {details: GameDetails}) => {
+export const GameImageTitle = ({ details }: { details: GameDetails }) => {
   return (
     <View style={styles.coverImageContainer}>
       <AdjustingImage style={styles.coverImage} source={details.imageUrl} />

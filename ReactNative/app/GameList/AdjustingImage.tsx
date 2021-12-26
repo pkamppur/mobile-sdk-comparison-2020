@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import {
   Image,
   ImageStyle,
@@ -53,7 +53,7 @@ export const AdjustingImage = ({
         resizeMode={'contain'}
         width={imageViewWidth}
         height={imageViewHeight}
-        source={{uri: source}}
+        source={{ uri: source }}
       />
     </View>
   );

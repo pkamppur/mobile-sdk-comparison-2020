@@ -1,17 +1,22 @@
-import {RouteProp} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
+import { RouteProp } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import * as React from 'react';
-import {ActivityIndicator, SafeAreaView, StyleSheet, View} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {BGGApi} from '../BGGApi/BGGApi';
-import {GameDetails} from '../BGGApi/GameDetails';
-import {GameDescription} from './GameDescription';
-import {GameImageTitle} from './GameImageTitle';
-import {GameInfo} from './GameInfo';
+import {
+  ActivityIndicator,
+  SafeAreaView,
+  StyleSheet,
+  View,
+} from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { BGGApi } from '../BGGApi/BGGApi';
+import { GameDetails } from '../BGGApi/GameDetails';
+import { GameDescription } from './GameDescription';
+import { GameImageTitle } from './GameImageTitle';
+import { GameInfo } from './GameInfo';
 
 type RootStackNavigationProps = {
-  GameDatailsScreen: {gameId: string};
+  GameDatailsScreen: { gameId: string };
 };
 
 type GameDatailsNavigationProps = StackNavigationProp<
@@ -32,7 +37,7 @@ type Props = {
 interface GameDetailsState {
   details?: GameDetails;
 }
-export const GameDetailsScreen = ({route, navigation}: Props) => {
+export const GameDetailsScreen = ({ route, navigation }: Props) => {
   const gameId = route.params.gameId;
 
   const [state, setState] = React.useState<GameDetailsState>({
@@ -43,8 +48,8 @@ export const GameDetailsScreen = ({route, navigation}: Props) => {
     BGGApi.fetchGameDetails(gameId)
       .then(details => {
         console.log('did load details:');
-        navigation.setOptions({title: details.name});
-        setState({details: details});
+        navigation.setOptions({ title: details.name });
+        setState({ details: details });
       })
       .catch(e => {
         console.log(e);

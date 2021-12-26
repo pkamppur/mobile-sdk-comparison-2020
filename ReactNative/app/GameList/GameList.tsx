@@ -1,4 +1,4 @@
-import {StackNavigationProp} from '@react-navigation/stack';
+import { StackNavigationProp } from '@react-navigation/stack';
 import * as React from 'react';
 import {
   ActivityIndicator,
@@ -7,10 +7,10 @@ import {
   TouchableHighlight,
   View,
 } from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {BGGApi} from '../BGGApi/BGGApi';
-import {Game} from '../BGGApi/Game';
-import {GameRow} from './GameRow';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { BGGApi } from '../BGGApi/BGGApi';
+import { Game } from '../BGGApi/Game';
+import { GameRow } from './GameRow';
 
 interface GameListState {
   games?: Game[];
@@ -20,16 +20,16 @@ interface GameListProps {
   navigation: StackNavigationProp<any>;
 }
 
-export const GameList = ({navigation}: GameListProps) => {
-  const [state, setState] = React.useState<GameListState>({games: undefined});
+export const GameList = ({ navigation }: GameListProps) => {
+  const [state, setState] = React.useState<GameListState>({ games: undefined });
 
   React.useEffect(() => {
     BGGApi.fetchTheHotness()
-      .then((games) => {
+      .then(games => {
         console.log('did load games');
-        setState({games: games});
+        setState({ games: games });
       })
-      .catch((e) => {
+      .catch(e => {
         console.log(e);
       });
   }, []);
@@ -45,9 +45,9 @@ export const GameList = ({navigation}: GameListProps) => {
       <FlatList
         ItemSeparatorComponent={FlatListItemSeparator}
         data={state.games}
-        renderItem={({item}) => {
+        renderItem={({ item }) => {
           const showGameDetails = () =>
-            navigation.navigate('GameDatailsScreen', {gameId: item.id});
+            navigation.navigate('GameDatailsScreen', { gameId: item.id });
           return (
             <TouchableHighlight onPress={showGameDetails}>
               <GameRow game={item} />
