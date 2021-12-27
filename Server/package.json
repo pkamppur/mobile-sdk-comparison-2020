@@ -7,10 +7,11 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "prebuild": "npm run lint:fix",
     "build": "tsc",
     "prestart": "npm run build",
     "start": "node dist/index.js",
+    "start:dev": "npm run build && PORT=38651 DEBUG=1 npm run start",
     "test": "node test.js",
     "lint": "eslint 'src/**/*.ts*'",
     "lint:fix": "npm run lint -- --fix",
