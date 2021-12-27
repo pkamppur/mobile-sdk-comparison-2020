@@ -1,18 +1,17 @@
-import { StackNavigationProp } from '@react-navigation/stack';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, FlatList, StyleSheet, TouchableHighlight, View } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { BGGApi } from '../BGGApi/BGGApi';
 import { Game } from '../BGGApi/Game';
+import { RootStackNavigationProps } from '../navigation';
 import { GameRow } from './GameRow';
 
 interface GameListState {
   games?: Game[];
 }
 
-interface GameListProps {
-  navigation: StackNavigationProp<any>;
-}
+type GameListProps = NativeStackScreenProps<RootStackNavigationProps, 'GameList'>;
 
 export const GameList = ({ navigation }: GameListProps) => {
   const [state, setState] = useState<GameListState>({ games: undefined });
@@ -39,7 +38,7 @@ export const GameList = ({ navigation }: GameListProps) => {
         ItemSeparatorComponent={FlatListItemSeparator}
         data={state.games}
         renderItem={({ item }) => {
-          const showGameDetails = () => navigation.navigate('GameDatailsScreen', { gameId: item.id });
+          const showGameDetails = () => navigation.navigate('GameDetails', { gameId: item.id });
           return (
             <TouchableHighlight onPress={showGameDetails}>
               <GameRow game={item} />

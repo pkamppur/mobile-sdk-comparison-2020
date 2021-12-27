@@ -1,32 +1,21 @@
-import { RouteProp } from '@react-navigation/native';
-import { StackNavigationProp } from '@react-navigation/stack';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, SafeAreaView, StyleSheet, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { BGGApi } from '../BGGApi/BGGApi';
 import { GameDetails } from '../BGGApi/GameDetails';
+import { RootStackNavigationProps } from '../navigation';
 import { GameDescription } from './GameDescription';
 import { GameImageTitle } from './GameImageTitle';
 import { GameInfo } from './GameInfo';
 
-type RootStackNavigationProps = {
-  GameDatailsScreen: { gameId: string };
-};
-
-type GameDatailsNavigationProps = StackNavigationProp<RootStackNavigationProps, 'GameDatailsScreen'>;
-
-type GameDatailsRouteProps = RouteProp<RootStackNavigationProps, 'GameDatailsScreen'>;
-
-type Props = {
-  route: GameDatailsRouteProps;
-  navigation: GameDatailsNavigationProps;
-};
+type GameDetailsProps = NativeStackScreenProps<RootStackNavigationProps, 'GameDetails'>;
 
 interface GameDetailsState {
   details?: GameDetails;
 }
-export const GameDetailsScreen = ({ route, navigation }: Props) => {
+export const GameDetailsScreen = ({ route, navigation }: GameDetailsProps) => {
   const gameId = route.params.gameId;
 
   const [state, setState] = useState<GameDetailsState>({
