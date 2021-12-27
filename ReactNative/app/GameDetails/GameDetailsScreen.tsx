@@ -1,12 +1,7 @@
 import { RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import React, { useEffect, useState } from 'react';
-import {
-  ActivityIndicator,
-  SafeAreaView,
-  StyleSheet,
-  View,
-} from 'react-native';
+import { ActivityIndicator, SafeAreaView, StyleSheet, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { BGGApi } from '../BGGApi/BGGApi';
@@ -19,15 +14,9 @@ type RootStackNavigationProps = {
   GameDatailsScreen: { gameId: string };
 };
 
-type GameDatailsNavigationProps = StackNavigationProp<
-  RootStackNavigationProps,
-  'GameDatailsScreen'
->;
+type GameDatailsNavigationProps = StackNavigationProp<RootStackNavigationProps, 'GameDatailsScreen'>;
 
-type GameDatailsRouteProps = RouteProp<
-  RootStackNavigationProps,
-  'GameDatailsScreen'
->;
+type GameDatailsRouteProps = RouteProp<RootStackNavigationProps, 'GameDatailsScreen'>;
 
 type Props = {
   route: GameDatailsRouteProps;

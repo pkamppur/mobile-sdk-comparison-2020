@@ -18,16 +18,8 @@ const Stack = createNativeStackNavigator<RootStackNavigationProps>();
 export const MyStack = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{ title: 'The Hotness' }}
-      />
-      <Stack.Screen
-        name="GameDatailsScreen"
-        component={GameDetailsScreen}
-        options={{ title: '' }}
-      />
+      <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'The Hotness' }} />
+      <Stack.Screen name="GameDatailsScreen" component={GameDetailsScreen} options={{ title: '' }} />
     </Stack.Navigator>
   );
 };

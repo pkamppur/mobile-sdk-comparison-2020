@@ -1,12 +1,6 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import React, { useEffect, useState } from 'react';
-import {
-  ActivityIndicator,
-  FlatList,
-  StyleSheet,
-  TouchableHighlight,
-  View,
-} from 'react-native';
+import { ActivityIndicator, FlatList, StyleSheet, TouchableHighlight, View } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { BGGApi } from '../BGGApi/BGGApi';
 import { Game } from '../BGGApi/Game';
@@ -45,8 +39,7 @@ export const GameList = ({ navigation }: GameListProps) => {
         ItemSeparatorComponent={FlatListItemSeparator}
         data={state.games}
         renderItem={({ item }) => {
-          const showGameDetails = () =>
-            navigation.navigate('GameDatailsScreen', { gameId: item.id });
+          const showGameDetails = () => navigation.navigate('GameDatailsScreen', { gameId: item.id });
           return (
             <TouchableHighlight onPress={showGameDetails}>
               <GameRow game={item} />

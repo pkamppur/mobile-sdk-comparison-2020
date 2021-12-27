@@ -10,9 +10,7 @@ export const GameImageTitle = ({ details }: { details: GameDetails }) => {
       <AdjustingImage style={styles.coverImage} source={details.imageUrl} />
       <View style={styles.titleContainer}>
         <Text style={[styles.titleText, styles.title]}>{details.name}</Text>
-        <Text style={[styles.titleText, styles.yearPublished]}>
-          {' ' + details.yearPublished}
-        </Text>
+        <Text style={[styles.titleText, styles.yearPublished]}>{' ' + details.yearPublished}</Text>
       </View>
     </View>
   );

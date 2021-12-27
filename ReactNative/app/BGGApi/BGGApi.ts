@@ -10,9 +10,7 @@ export namespace BGGApi {
     return json.items;
   };
 
-  export const fetchGameDetails = async (
-    gameId: string,
-  ): Promise<GameDetails> => {
+  export const fetchGameDetails = async (gameId: string): Promise<GameDetails> => {
     const response = await fetch(`${baseUrl}/games/${gameId}/details`);
     const json = await response.json();
     return json;

@@ -9,16 +9,8 @@ export const GameDescription = ({ details }: { details: GameDetails }) => {
       <View style={styles.divider} />
       <View style={styles.categoriesContainer}>
         <Category title="Category" content={details.categories} />
-        <Category
-          title="Mechanisms"
-          content={details.mechanisms}
-          style={styles.categoryPadding}
-        />
-        <Category
-          title="Family"
-          content={details.families}
-          style={styles.categoryPadding}
-        />
+        <Category title="Mechanisms" content={details.mechanisms} style={styles.categoryPadding} />
+        <Category title="Family" content={details.families} style={styles.categoryPadding} />
       </View>
       <Text style={styles.descriptionText}>{details.description}</Text>
     </View>
