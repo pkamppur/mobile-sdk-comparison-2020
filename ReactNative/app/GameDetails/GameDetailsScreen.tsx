@@ -12,28 +12,22 @@ import { GameInfo } from './GameInfo';
 
 type GameDetailsProps = NativeStackScreenProps<RootStackNavigationProps, 'GameDetails'>;
 
-interface GameDetailsState {
-  details?: GameDetails;
-}
 export const GameDetailsScreen = ({ route, navigation }: GameDetailsProps) => {
   const gameId = route.params.gameId;
 
-  const [state, setState] = useState<GameDetailsState>({
-    details: undefined,
-  });
+  const [details, setDetails] = useState<GameDetails | undefined>(undefined);
 
   useEffect(() => {
     BGGApi.fetchGameDetails(gameId)
-      .then(details => {
-        navigation.setOptions({ title: details.name });
-        setState({ details: details });
+      .then(newDetails => {
+        navigation.setOptions({ title: newDetails.name });
+        setDetails(newDetails);
       })
       .catch(e => {
         console.log(e);
       });
   }, [gameId, navigation]);
 
-  const details = state.details;
   if (!details) {
     return (
       <View style={styles.loadingContainer}>
