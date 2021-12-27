@@ -26,7 +26,6 @@ export const GameList = ({ navigation }: GameListProps) => {
   useEffect(() => {
     BGGApi.fetchTheHotness()
       .then(games => {
-        console.log('did load games');
         setState({ games: games });
       })
       .catch(e => {

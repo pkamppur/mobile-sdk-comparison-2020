@@ -47,7 +47,6 @@ export const GameDetailsScreen = ({ route, navigation }: Props) => {
   useEffect(() => {
     BGGApi.fetchGameDetails(gameId)
       .then(details => {
-        console.log('did load details:');
         navigation.setOptions({ title: details.name });
         setState({ details: details });
       })
