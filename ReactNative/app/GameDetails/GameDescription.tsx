@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
 import { GameDetails, Link as GameDetailsLink } from '../BGGApi/GameDetails';
 

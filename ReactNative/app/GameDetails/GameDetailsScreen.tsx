@@ -1,6 +1,6 @@
 import { RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ActivityIndicator,
   SafeAreaView,
@@ -40,11 +40,11 @@ interface GameDetailsState {
 export const GameDetailsScreen = ({ route, navigation }: Props) => {
   const gameId = route.params.gameId;
 
-  const [state, setState] = React.useState<GameDetailsState>({
+  const [state, setState] = useState<GameDetailsState>({
     details: undefined,
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     BGGApi.fetchGameDetails(gameId)
       .then(details => {
         console.log('did load details:');

@@ -1,5 +1,5 @@
 import { StackNavigationProp } from '@react-navigation/stack';
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ActivityIndicator,
   FlatList,
@@ -21,9 +21,9 @@ interface GameListProps {
 }
 
 export const GameList = ({ navigation }: GameListProps) => {
-  const [state, setState] = React.useState<GameListState>({ games: undefined });
+  const [state, setState] = useState<GameListState>({ games: undefined });
 
-  React.useEffect(() => {
+  useEffect(() => {
     BGGApi.fetchTheHotness()
       .then(games => {
         console.log('did load games');
