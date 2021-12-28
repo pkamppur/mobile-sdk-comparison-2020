@@ -1,0 +1,98 @@
+{
+  "artists": [],
+  "categories": [
+    {
+      "id": "3001",
+      "name": "Sports"
+    },
+    {
+      "id": "3002",
+      "name": "Toys"
+    },
+    {
+      "id": "3003",
+      "name": "Computers"
+    },
+    {
+      "id": "3004",
+      "name": "Industrial"
+    }
+  ],
+  "description": "Et omnis natus delectus quidem accusamus. Cum praesentium vel. Et exercitationem dolorum provident animi dignissimos modi adipisci. Et est amet quia eos quibusdam corrupti magni. Odio et et ipsam id.\n \rUt pariatur aut dolor aut modi vero. Eum perspiciatis fugit enim et libero est et repellendus. Quis vel ipsam et iure corporis. Laborum dolor ut. Eum accusantium vitae voluptas.\n \rMagni odio nisi vero et quo natus ullam deleniti. Eligendi rerum facere dolor est accusantium iusto mollitia velit. Ut dicta repudiandae amet dolores omnis eum debitis. Dignissimos est qui non eaque dolores ratione. Accusamus est velit illum eaque tempora voluptate.",
+  "designers": [
+    {
+      "id": "4001",
+      "name": "Vincent Hand"
+    },
+    {
+      "id": "4002",
+      "name": "Stella Kilback"
+    }
+  ],
+  "expansions": [],
+  "families": [],
+  "id": "10001",
+  "imageUrl": "http://placeimg.com/640/480/383bdcaf-e2c5-4c0e-bf1c-d9b6d9bc5459-full.png",
+  "implementations": [],
+  "mechanisms": [
+    {
+      "id": "5001",
+      "name": "Sports"
+    },
+    {
+      "id": "5002",
+      "name": "Tools"
+    },
+    {
+      "id": "5003",
+      "name": "Books"
+    },
+    {
+      "id": "5004",
+      "name": "Garden"
+    },
+    {
+      "id": "5005",
+      "name": "Music"
+    },
+    {
+      "id": "5006",
+      "name": "Home"
+    },
+    {
+      "id": "5007",
+      "name": "Jewelery"
+    }
+  ],
+  "name": "Intelligent Wooden Fish",
+  "playersBest": 2,
+  "playersMax": 4,
+  "playersMin": 1,
+  "playingTime": 150,
+  "playingTimeMax": 150,
+  "playingTimeMin": 90,
+  "publishers": [
+    {
+      "id": "6001",
+      "name": "King and Sons"
+    },
+    {
+      "id": "6002",
+      "name": "Baumbach, O'Kon and Crist"
+    },
+    {
+      "id": "6003",
+      "name": "Satterfield, Blick and Rempel"
+    },
+    {
+      "id": "6004",
+      "name": "Vandervort - Hagenes"
+    },
+    {
+      "id": "6005",
+      "name": "Torp LLC"
+    }
+  ],
+  "thumbnailUrl": "http://placeimg.com/640/480/383bdcaf-e2c5-4c0e-bf1c-d9b6d9bc5459.png",
+  "yearPublished": "2020"
+}
