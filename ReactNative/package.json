@@ -7,9 +7,11 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint '{app,__test__}/**/*.ts*'",
+    "test:e2e:ios:debug": "detox test -c ios",
+    "test:e2e:ios:debug:build": "detox build -c ios",
+    "lint": "eslint '{e2e,app,__test__}/**/*.ts*'",
     "lint:fix": "npm run lint -- --fix",
-    "prettier": "prettier --check '{app,__tests__}/**/*.{js,ts}*'",
+    "prettier": "prettier --check '{e2e,app,__tests__}/**/*.{js,ts}*'",
     "prettier:fix": "npm run prettier -- --write"
   },
   "dependencies": {
@@ -35,6 +37,7 @@
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
     "babel-jest": "^27.4.5",
+    "detox": "^19.3.1",
     "eslint": "^8.5.0",
     "eslint-plugin-react-native": "^4.0.0",
     "faker": "^5.5.3",
@@ -66,7 +69,7 @@
       "utils/*"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)"
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native|@react-native-community|react-navigation|@react-navigation/.*)"
     ],
     "setupFiles": [
       "<rootDir>/__tests__/jest-setup.js"
