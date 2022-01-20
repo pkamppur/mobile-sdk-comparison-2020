@@ -1,21 +1,7 @@
-import * as React from 'react';
-import {useState, useEffect} from 'react';
-import {
-  Image,
-  ImageStyle,
-  LayoutChangeEvent,
-  StyleProp,
-  View,
-  ViewStyle,
-} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Image, ImageStyle, LayoutChangeEvent, StyleProp, View, ViewStyle } from 'react-native';
 
-export const AdjustingImage = ({
-  source,
-  style,
-}: {
-  source: string;
-  style?: StyleProp<ViewStyle>;
-}) => {
+export const AdjustingImage = ({ source, style }: { source: string; style?: StyleProp<ViewStyle> }) => {
   const [containerWidth, setContainerWidth] = useState(0);
   const [containerHeight, setContainerHeight] = useState(0);
   const [imageWidth, setImageWidth] = useState(0);
@@ -53,7 +39,7 @@ export const AdjustingImage = ({
         resizeMode={'contain'}
         width={imageViewWidth}
         height={imageViewHeight}
-        source={{uri: source}}
+        source={{ uri: source }}
       />
     </View>
   );

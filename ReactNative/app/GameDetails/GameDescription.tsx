@@ -1,24 +1,16 @@
-import * as React from 'react';
-import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
-import {GameDetails, Link as GameDetailsLink} from '../BGGApi/GameDetails';
+import React from 'react';
+import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
+import { GameDetails, Link as GameDetailsLink } from '../BGGApi/GameDetails';
 
-export const GameDescription = ({details}: {details: GameDetails}) => {
+export const GameDescription = ({ details }: { details: GameDetails }) => {
   return (
     <View style={styles.descriptionContainer}>
       <Text style={styles.descriptionTitle}>Description</Text>
       <View style={styles.divider} />
       <View style={styles.categoriesContainer}>
         <Category title="Category" content={details.categories} />
-        <Category
-          title="Mechanisms"
-          content={details.mechanisms}
-          style={styles.categoryPadding}
-        />
-        <Category
-          title="Family"
-          content={details.families}
-          style={styles.categoryPadding}
-        />
+        <Category title="Mechanisms" content={details.mechanisms} style={styles.categoryPadding} />
+        <Category title="Family" content={details.families} style={styles.categoryPadding} />
       </View>
       <Text style={styles.descriptionText}>{details.description}</Text>
     </View>
@@ -37,7 +29,7 @@ const Category = ({
   return (
     <View style={style}>
       <Text style={styles.categoryTitle}>{title}</Text>
-      {content.map((x) => (
+      {content.map(x => (
         <Text key={x.id} style={styles.categoryContents}>
           {x.name}
         </Text>

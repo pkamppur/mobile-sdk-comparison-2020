@@ -1,12 +1,12 @@
-import * as React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {Game} from '../BGGApi/Game';
+import React from 'react';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { Game } from '../BGGApi/Game';
 
-export const GameRow = ({game}: {game: Game}) => {
+export const GameRow = ({ game }: { game: Game }) => {
   return (
     <View style={styles.gameRow}>
-      <Image style={styles.thumbnail} source={{uri: game.thumbnailUrl}} />
+      <Image style={styles.thumbnail} source={{ uri: game.thumbnailUrl }} />
       <View style={styles.textContainer}>
         <Text style={styles.title}>{game.name}</Text>
         <Text style={styles.yearPublished}>{game.yearPublished}</Text>

@@ -1,8 +1,8 @@
-import * as React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {GameDetails} from '../BGGApi/GameDetails';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { GameDetails } from '../BGGApi/GameDetails';
 
-export const GameInfo = ({details}: {details: GameDetails}) => {
+export const GameInfo = ({ details }: { details: GameDetails }) => {
   return (
     <View style={styles.infoContainer}>
       <View style={styles.infoTable}>
@@ -23,15 +23,11 @@ export const GameInfo = ({details}: {details: GameDetails}) => {
       <View style={styles.creditsContainer}>
         <View style={styles.creditsRow}>
           <Text style={styles.creditsLabel}>Designer: </Text>
-          <Text style={styles.creditsValue}>
-            {details.designers.map((x) => x.name).join(', ')}
-          </Text>
+          <Text style={styles.creditsValue}>{details.designers.map(x => x.name).join(', ')}</Text>
         </View>
         <View style={styles.creditsRow}>
           <Text style={styles.creditsLabel}>Artist: </Text>
-          <Text style={styles.creditsValue}>
-            {details.artists.map((x) => x.name).join(', ')}
-          </Text>
+          <Text style={styles.creditsValue}>{details.artists.map(x => x.name).join(', ')}</Text>
         </View>
         <View style={styles.creditsRow}>
           <Text style={styles.creditsLabel}>Publisher: </Text>
